@@ -1,0 +1,102 @@
+/* estilos gerais */
+body {
+    background-color: #000000;
+    color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+main {
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    width: 100%;
+    height: 100vh;             
+    gap: 2rem;                 /* Espaçamento entre aside e imagem */
+}
+
+aside {
+    text-align: left;          /* Textos alinhados à esquerda */
+    max-width: 600px;          /* Limita a largura */
+}
+
+#text h1 {
+    font-family: "Krona One", serif;
+    font-weight: 400;
+    font-size: 2rem;           /* Tamanho do título */
+    line-height: 1.5;          /* Altura entre linhas */
+}
+
+#text strong {
+    color: #94E8B4;
+}
+
+#text p {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 1rem;
+}
+
+#links {
+    margin-top: 2rem;
+}
+
+#links a {
+    display: inline-block;     
+    background-color: #94E8B4;
+    color: #000000;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;    
+    font-weight: 600;
+    margin-right: 1rem;        
+    transition: 0.4s ease-in-out; 
+}
+
+#links a:hover {
+    padding: 0.7rem 1.2rem;
+    background-color: #6bc596;
+}
+
+/* Estilizando o container da imagem */
+.image-container {
+    position: relative; /* Para que o texto possa ser posicionado em relação à imagem */
+    display: inline-block;
+    width: 24rem; 
+    overflow: hidden; /* Evita que o texto ou elementos extras saiam do espaço da imagem */
+
+}
+
+/* Estilo da imagem */
+.image-container img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Garante que a imagem se encaixe bem */
+    transition: 0.3s ease; 
+}
+
+/* Texto que aparece no hover */
+.image-container .hover-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento para o centro */
+    color: #ffffff; 
+    font-size: 1.2rem; 
+    font-family: "Open Sans", sans-serif;
+    text-align: center; 
+    opacity: 0; /* Esconde o texto inicialmente */
+    pointer-events: none; /* Impede interação com o texto */
+    transition: opacity 0.3s ease; 
+}
+
+/* Efeito no hover */
+.image-container:hover img {
+    filter: brightness(50%); /* Escurece a imagem */
+}
+
+.image-container:hover .hover-text {
+    opacity: 1; /* Torna o texto visível */
+}
